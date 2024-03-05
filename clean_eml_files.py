@@ -4,7 +4,9 @@ import pandas as pd
     
     
 def open_and_clean(file_type):
-
+    '''
+    Основная рабочая функция на открытие, обработку, сохранения файлов
+    '''
     user_profile_path = os.environ['USERPROFILE']
     docs_code_path = '\\!Worker\\'
     scr_path = os.path.join(user_profile_path, docs_code_path)
@@ -15,6 +17,7 @@ def open_and_clean(file_type):
           'После того как переместишь файл в необходимую папку, вернись в эту консоль')
     input('Для продолжения нажми любую клавишу...')
     os.system(f'explorer {scr_path}')
+
     print('Для того, чтобы не париться с переписыванием имени файла и не удивляться тому, что тут не работает Ctrl+V\n'
           'Нужно нажимать Shift+Insert(на некоторых клавиатурах Ins)')
     file_name = input('Введите имя файла: ')
